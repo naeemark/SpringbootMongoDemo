@@ -12,7 +12,16 @@ A sample app using Java `Spring boot` and `MongoDB` for `sample` project
 - A `RESTful CRUD` mock api with response format `JSON`
 - Provides functionality for `Hotel` reository
 - **Calls**
-  - **GET** 
+  - **GET** Gets all Hotels
+  - **GET{id}** Gets Hotel by Id
+  - **GET{maxPrice}** Gets Hotel by maxPrice Param
+  - **GET{city}** Gets Hotel by city
+  - **POST** Creats new Hotel in database
+  - **PUT** Updates Hotel in database
+  - **Delete** Deletes Hotel from database
+  
+  
+  
 
 #### Dependencies
 
