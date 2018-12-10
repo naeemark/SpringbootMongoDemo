@@ -1,5 +1,7 @@
 package naeemark;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/hotels")
 public class HotelController {
+
+    private static final Logger logger = LoggerFactory.getLogger(HotelController.class);
 
     private HotelRepository hotelRepository;
 
@@ -64,7 +68,7 @@ public class HotelController {
     @GetMapping("/address/{city}")
     public List<Hotel> findByCity(@PathVariable("city") String city){
 
-        System.out.println(city);
+        logger.warn(city);
         List<Hotel> hotels = this.hotelRepository.findByCity(city);
         return hotels;
     }
