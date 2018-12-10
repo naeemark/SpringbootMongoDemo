@@ -33,3 +33,4 @@ A sample app using Java `Spring boot` and `MongoDB` for `sample` project
 
 - [Create a Spring Boot App...](https://www.youtube.com/watch?v=Hu-cyytqfp8&t=2088s)
 - [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/2.1.x/reference/html/)
+- [Spring Boot - Logging](https://www.tutorialspoint.com/spring_boot/spring_boot_logging.htm)
