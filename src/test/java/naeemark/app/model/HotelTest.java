@@ -21,8 +21,8 @@ public class HotelTest {
         Address address = new Address("KL", "ML");
 
         Hotel hotel = new Hotel("Taj", 100, address, new ArrayList<>());
-
         Assert.assertEquals("Taj", hotel.getName());
+        Assert.assertEquals("KL", hotel.getAddress().getCity());
 
     }
 }

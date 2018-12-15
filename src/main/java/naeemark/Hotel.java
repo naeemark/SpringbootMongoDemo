@@ -3,6 +3,7 @@ package naeemark;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -19,6 +20,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Document(collection = "Hotels")
 public class Hotel {
 
@@ -36,16 +38,5 @@ public class Hotel {
         this.pricePerNight = pricePerNight;
         this.address = address;
         this.reviews = reviews;
-    }
-
-    @Override
-    public String toString() {
-        return "Hotel{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", pricePerNight=" + pricePerNight +
-                ", address=" + address +
-                ", reviews=" + reviews +
-                '}';
     }
 }

@@ -22,7 +22,7 @@ public class DbSeeder implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         Hotel marriot = new Hotel(
                 "Marriot",
@@ -38,7 +38,8 @@ public class DbSeeder implements CommandLineRunner {
                 90,
                 new Address("Bucharest", "Romania"),
                 Arrays.asList(
-                        new Review("Ted", 9, true)
+                        new Review("Ted", 9, true),
+                        new Review("Hena", 3, true)
                 ));
 
         Hotel sofitel = new Hotel(
@@ -46,7 +47,8 @@ public class DbSeeder implements CommandLineRunner {
                 200,
                 new Address("Rome", "Itly"),
                 Arrays.asList(
-                        new Review("Andrew", 7, true)
+                        new Review("Andrew", 7, true),
+                        new Review("Telly", 3, true)
                 ));
 
         // Drop data first

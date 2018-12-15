@@ -3,6 +3,7 @@ package naeemark;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * Created by Naeem <naeemark@gmail.com>.
@@ -12,16 +13,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Address {
 
     private String city;
     private String country;
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "city='" + city + '\'' +
-                ", country='" + country + '\'' +
-                '}';
-    }
 }
