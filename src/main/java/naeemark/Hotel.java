@@ -1,11 +1,13 @@
 package naeemark;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,6 +16,9 @@ import java.util.List;
  * Created on: 2018-12-09
  */
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Document(collection = "Hotels")
 public class Hotel {
 
@@ -26,35 +31,11 @@ public class Hotel {
     private Address address;
     private List<Review> reviews;
 
-    protected Hotel() {
-        this.reviews = new ArrayList<>();
-    }
-
     public Hotel(String name, int pricePerNight, Address address, List<Review> reviews) {
         this.name = name;
         this.pricePerNight = pricePerNight;
         this.address = address;
         this.reviews = reviews;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getPricePerNight() {
-        return pricePerNight;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public List<Review> getReviews() {
-        return reviews;
     }
 
     @Override
